@@ -1,0 +1,90 @@
+.App{
+  display:block;
+}
+
+.Card{
+  width: 80%;
+  height: 10%;
+  display: block;
+  background: rgb(211, 221, 245);
+  border-radius: 1rem;
+  text-align:center;
+}
+
+/*WIP*/
+.Column{
+  width: 300px;
+  height: 800px;
+}
+
+.Popup{
+  width: 50rem;
+  height: auto;
+  padding: 1rem;
+  border: 5px solid lightgray;
+  border-radius: 1rem;
+  background-color: rgba(255,255,255,1)
+}
+
+.Popup p{
+  display: block;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.Popup button{
+  border:none;
+  border-bottom: 1px solid black;
+  background: white;  
+  border-radius:3px;
+  margin:0.2rem;
+}
+
+.Popup button:hover{
+  border:none;
+  border-bottom: 1px solid black;
+  background: rgb(211, 221, 245);  
+}
+
+.ButtonsDiv{
+  border-top: 2px solid lightgray;
+  padding-top: 5px;
+  display:flex;
+}
+
+
+
+.VL{
+  border-right: 2px solid lightgray;
+  width:0px;
+  height:1.3rem;
+}
+
+.Header button{  
+  margin-right: 1rem;
+
+
+}
+
+.Header .ButtonsDiv{
+  margin-top: -3rem;
+  border:none;
+  justify-content: flex-end;;
+}
+
+
+.Edit{
+  display: block;
+  width: 30rem;
+  height: auto;
+  padding: 1rem;
+  border: 5px solid lightgray;
+  border-radius: 1rem;
+  background-color: rgba(255,255,255,1)
+}
+
+textarea{
+  width: 30rem;
+  height: 10rem;
+  resize: none;
+}
