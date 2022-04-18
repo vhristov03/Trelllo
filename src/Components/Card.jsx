@@ -30,8 +30,7 @@ class Card extends Component {
             <Popup modal trigger={
             <div className='Card'>
                 <h3>{this.state.title}</h3>   
-            </div>}
-            >
+            </div>}>
                 <div className='Popup'>
                     <h1>{this.state.title}</h1>
                     <h4>By: {this.state.author}</h4>
