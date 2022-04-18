@@ -19,7 +19,8 @@ class Board extends Component {
 
     render() { 
         return (
-            <h1>{this.state.columns.map((columns, key)=>{return (<h5>{this.state.columns[key]}</h5>);})}</h1>
+            <h1>{this.state.name}</h1>
+
         );
     }
 }
