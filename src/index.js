@@ -15,12 +15,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header/>
-    <App/>
-    <div className='Column'>
-      <Card title='asd'/>
-      <Card title='lorem' author='blah blah' desc='dtebugzpredatelgadenutrepkadolnamrusnagadnadaumreshvkofadanossamoubiistepluhmindilhiumnemijiturkagaloshprost i smotan'/>
-      <Board />
-    </div>
+    <Card title='asd'/>
+    <Board/>
+    
   </React.StrictMode>
 );
 

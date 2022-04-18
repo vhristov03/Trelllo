@@ -14,6 +14,8 @@ class Card extends Component {
 
         this.handleChangeDesc = this.handleChangeDesc.bind(this);
         this.handleChangeAuthor = this.handleChangeAuthor.bind(this);
+        this.handleChangeTitle = this.handleChangeTitle.bind(this);
+        this.handleSubmit =  this.handleSubmit.bind(this);
         
     }
 
@@ -25,9 +27,18 @@ class Card extends Component {
         this.setState({author: event.target.value});
     }
 
+    handleChangeTitle(event){
+        this.setState({title: event.target.value});
+    }
+
+    handleSubmit(event){
+        event.preventDefault();
+        
+    }
+
     render() {
         return (
-            <Popup modal trigger={
+            <Popup nested trigger={
             <div className='Card'>
                 <h3>{this.state.title}</h3>   
             </div>}
@@ -40,23 +51,32 @@ class Card extends Component {
                     <h5>Created: {this.state.created.toLocaleString()}</h5>
                     
                     <div className='ButtonsDiv'>
-                        <Popup modal trigger={<button>Edit Description</button>}>
+                        <Popup nested trigger={<button>Edit Description</button>}>
                             <div className='Edit'>
                                 <label>New Description:</label>
-                                <form>
-
+                                <form onSubmit={this.handleSubmit}>
                                     <textarea value={this.state.desc} onChange={this.handleChangeDesc}></textarea>
                                 </form>
-                                    <button>Close</button>
+                                    
                             </div>
                         </Popup>
 
-                        <Popup modal trigger={<button>Author</button>}>
+                        <Popup nested trigger={<button>Change Author</button>}>
                             <div className='Edit'>
                                 <label>New author:</label>
-                                <form>
+                                <form onSubmit={this.handleSubmit}>
                                     <input type='text' value={this.state.author} onChange={this.handleChangeAuthor}/>
-                                    <input type='submit'></input>
+
+                                </form>
+                                    
+                            </div>
+                        </Popup>
+
+                        <Popup nested trigger={<button>Change Title</button>}>
+                            <div className='Edit'>
+                                <label>New Title:</label>
+                                <form onSubmit={this.handleSubmit}>
+                                    <input type='text' value={this.state.title} onChange={this.handleChangeTitle}/>
                                 </form>
                                     
                             </div>

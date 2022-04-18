@@ -11,6 +11,15 @@ class Header extends Component {
             boards: []
         }
     };
+
+    addBoardButton(){
+        if(this.state.user != ''){
+            return(
+                <button>Add Board</button>
+                
+            );
+        }
+    }
     
     render() { 
         return (
@@ -20,7 +29,7 @@ class Header extends Component {
                     <div className='ButtonsDiv'>
                         <Popup modal trigger={<button>Boards</button>}>
                             <div className='Popup'>
-                            <label>{}</label>
+                            {this.addBoardButton()}
                             </div>
                         </Popup> 
                         <button>Log in</button>
