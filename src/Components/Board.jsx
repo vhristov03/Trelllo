@@ -8,7 +8,8 @@ class Board extends Component {
         this.state= {
             name: props.name,
             user: props.user,
-            columns: ['a','n','b','test','asd']
+            columns: ['a','n','b','test','asd'],
+            archived: []
         };
     }
     //WIP

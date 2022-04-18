@@ -11,9 +11,6 @@ class Header extends Component {
             boards: []
         }
     };
-
-    fetchGlobals(){
-    }
     
     render() { 
         return (

@@ -11,7 +11,18 @@ class Card extends Component {
             author: props.author,
             created: new Date()
         };
+
+        this.handleChangeDesc = this.handleChangeDesc.bind(this);
+        this.handleChangeAuthor = this.handleChangeAuthor.bind(this);
         
+    }
+
+    handleChangeDesc(event){
+        this.setState({desc: event.target.value});
+    }
+
+    handleChangeAuthor(event){
+        this.setState({author: event.target.value});
     }
 
     render() {
@@ -29,13 +40,33 @@ class Card extends Component {
                     <h5>Created: {this.state.created.toLocaleString()}</h5>
                     
                     <div className='ButtonsDiv'>
-                        <button /*onClick={Edit}*/>Edit Description</button>  
-                        <button>Author</button>
+                        <Popup modal trigger={<button>Edit Description</button>}>
+                            <div className='Edit'>
+                                <label>New Description:</label>
+                                <form>
+
+                                    <textarea value={this.state.desc} onChange={this.handleChangeDesc}></textarea>
+                                </form>
+                                    <button>Close</button>
+                            </div>
+                        </Popup>
+
+                        <Popup modal trigger={<button>Author</button>}>
+                            <div className='Edit'>
+                                <label>New author:</label>
+                                <form>
+                                    <input type='text' value={this.state.author} onChange={this.handleChangeAuthor}/>
+                                    <input type='submit'></input>
+                                </form>
+                                    
+                            </div>
+                        </Popup>
+
                         <div className='VL'></div>
                         <button>Copy</button>
                         <button>Move to</button>
                         <div className='VL'></div>
-                        <button /*onClick={Edit}*/>Archive</button>
+                        <button >Archive</button>
                     </div>
                 </div>
             </Popup>
